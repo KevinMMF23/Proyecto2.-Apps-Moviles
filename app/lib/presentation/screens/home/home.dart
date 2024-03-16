@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
-  const Home({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Flutter + material 3"),
-      centerTitle: false,
+      appBar: AppBar(
+        title: const Text('Flutter + Material 3'),
+        
       ),
-      
     );
   }
 }
