@@ -1,15 +1,21 @@
+import 'package:app/config/menu/menu_items.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Flutter + Material 3'),
-        
-      ),
-    );
-  }
+class _HomeView extends StatelessWidget {
+const _HomeView({
+   super.key,
+  
+  });
 }
+
+class _CustomListTitle extends StatelessWidget {
+const _CustomListTitle({
+required this.menuItem
+ });
+
+ final MenuItem menuItem;
+
+
+}
+
+
