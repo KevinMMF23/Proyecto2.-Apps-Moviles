@@ -1,6 +1,7 @@
+import 'package:app/config/menu/menu_items.dart';
+import 'package:app/presentation/widgets/CustomListTitle.dart';
 import 'package:flutter/material.dart';
-import 'package:widgets_2024_1/config/menu/menu_items.dart';
-import 'package:widgets_2024_1/presentation/witgets/CustomListTitle.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

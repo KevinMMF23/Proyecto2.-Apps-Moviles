@@ -1,5 +1,6 @@
+import 'package:app/config/menu/menu_items.dart';
 import 'package:flutter/material.dart';
-import 'package:PROYECTO2.-APPS-MOVILES/config/menu/menu_items.dart';
+
 
 class CustomListTitle extends StatelessWidget {
   const CustomListTitle({
