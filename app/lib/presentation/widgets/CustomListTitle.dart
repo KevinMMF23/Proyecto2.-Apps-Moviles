@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:widgets_2024_1/config/menu/menu_items.dart';
+import 'package:PROYECTO2.-APPS-MOVILES/config/menu/menu_items.dart';
 
 class CustomListTitle extends StatelessWidget {
   const CustomListTitle({
-    super.key,
+    Key? key,
     required this.menuItem,
-  });
+  }) : super(key: key);
 
   final MenuItem menuItem;
 
@@ -24,7 +24,7 @@ class CustomListTitle extends StatelessWidget {
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subtitle),
       onTap: () {
-        print('llamado de la liga a donde ir ${menuItem.link}');
+        print('Llamado de la liga a donde ir: ${menuItem.link}');
       },
     );
   }
