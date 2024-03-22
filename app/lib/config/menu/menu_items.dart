@@ -14,7 +14,7 @@ class MenuItem {
   });
 }
 
-// Define los elementos del menú
+// Menu
 const appMenuItems = <MenuItem>[
   MenuItem(
     title: 'Botones',
