@@ -28,6 +28,9 @@ class _HomeView extends StatelessWidget {
         itemCount: appMenuItems.length, itemBuilder: getMenuList);
   }
 
-  Widget getMenuList(context, index) =>
-      CustomListTitle(menuItem: appMenuItems[index]);
-}
+Widget getMenuList(context, index) => CustomListTitle(
+      menuItem: appMenuItems[index],
+      onTap: () {
+        appRouter.go(appMenuItems[index].link);
+      },
+    );

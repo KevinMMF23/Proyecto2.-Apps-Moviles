@@ -1,14 +1,15 @@
 import 'package:app/config/menu/menu_items.dart';
 import 'package:flutter/material.dart';
 
-
 class CustomListTitle extends StatelessWidget {
   const CustomListTitle({
     Key? key,
     required this.menuItem,
+    required this.onTap,
   }) : super(key: key);
 
   final MenuItem menuItem;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +25,7 @@ class CustomListTitle extends StatelessWidget {
       ),
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subtitle),
-      onTap: () {
-        print('Llamado de la liga a donde ir: ${menuItem.link}');
-      },
+      onTap: onTap,
     );
   }
 }
