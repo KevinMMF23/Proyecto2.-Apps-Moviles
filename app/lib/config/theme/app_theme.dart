@@ -1,29 +1,37 @@
 import 'package:flutter/material.dart';
 
-const List<Color> colorList = <Color>[
+const colorList = <Color>[
   Colors.blue,
   Colors.teal,
   Colors.green,
-  Colors.orange,
   Colors.red,
   Colors.purple,
   Colors.deepPurple,
-  Colors.brown,
+  Colors.orange,
+  Colors.deepOrange,
   Colors.pink,
   Colors.pinkAccent
 ];
 
 class AppTheme {
   final int selectedColor;
+  final bool isDarkMode;
 
-  AppTheme({required this.selectedColor})
-      : assert(selectedColor >= 0 && selectedColor < colorList.length,
-            'La selección de color no cumple con el rango de 0 asta ${colorList.length}-1');
+  AppTheme({
+    this.selectedColor = 0,
+    this.isDarkMode = false,
+  }) : assert(selectedColor >= 0 && selectedColor < colorList.length,
+            'La selección de color no cumple con el rango de 0 asta ${colorList.length - 1}');
 
   ThemeData getTheme() => ThemeData(
       useMaterial3: true,
+      brightness: isDarkMode ? Brightness.dark : Brightness.light,
       colorSchemeSeed: colorList[selectedColor],
-      appBarTheme: const AppBarTheme(
-        centerTitle: false,
-      ));
+      appBarTheme: const AppBarTheme(centerTitle: false));
+
+      
+  AppTheme copyWith({int? selectedColor, bool? isDarkMode}) => AppTheme(
+        selectedColor: selectedColor ?? this.selectedColor,
+        isDarkMode: isDarkMode ?? this.isDarkMode,
+      );
 }
